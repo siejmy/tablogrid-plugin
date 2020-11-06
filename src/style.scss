@@ -17,15 +17,27 @@
 }
 
 .tgrow .tgcol {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+	position: relative;
 	padding: 0;
 	margin: 0;
 	width: auto;
+	padding-top: 151.51%;
 	background-color: #ddd;
+	margin-bottom: 8%;
+}
+
+@media (min-width: 768px) {
+	.tgrow .tgcol {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: 0;
+		margin: 0;
+		width: auto;
+		background-color: #ddd;
+	}
 }
 
 /*
@@ -37,22 +49,24 @@
  ********************************
  * LTB
  */
-.tgrow.ltb {
-	padding-top: 66.66%;
-}
+@media (min-width: 768px) {
+	.tgrow.ltb {
+		padding-top: 66.66%;
+	}
 
-.tgrow.ltb .tgcol.c1 {
-	right: 54%;
-}
+	.tgrow.ltb .tgcol.c1 {
+		right: 54%;
+	}
 
-.tgrow.ltb .tgcol.c2 {
-	bottom: 56%;
-	left: 54%;
-}
+	.tgrow.ltb .tgcol.c2 {
+		bottom: 56%;
+		left: 54%;
+	}
 
-.tgrow.ltb .tgcol.c3 {
-	top: 56%;
-	left: 54%;
+	.tgrow.ltb .tgcol.c3 {
+		top: 56%;
+		left: 54%;
+	}
 }
 
 /*
@@ -64,23 +78,25 @@
  ********************************
  * TBR
  */
-.tgrow.tbr {
-	padding-top: 66.66%;
-}
+@media (min-width: 768px) {
+	.tgrow.tbr {
+		padding-top: 66.66%;
+	}
 
-.tgrow.tbr .tgcol.c1 {
-	bottom: 56%;
-	right: 54%;
-}
+	.tgrow.tbr .tgcol.c1 {
+		bottom: 56%;
+		right: 54%;
+	}
 
-.tgrow.tbr .tgcol.c2 {
-	top: 56%;
-	right: 54%;
-}
+	.tgrow.tbr .tgcol.c2 {
+		top: 56%;
+		right: 54%;
+	}
 
-.tgrow.tbr .tgcol.c3 {
-	left: 54%;
-	width: 46%;
+	.tgrow.tbr .tgcol.c3 {
+		left: 54%;
+		width: 46%;
+	}
 }
 
 /*
@@ -92,16 +108,18 @@
  ********************************
  * DUO
  */
-.tgrow.duo {
-	padding-top: 29.3%;
-}
+@media (min-width: 768px) {
+	.tgrow.duo {
+		padding-top: 29.3%;
+	}
 
-.tgrow.duo .tgcol.c1 {
-	right: 54%;
-}
+	.tgrow.duo .tgcol.c1 {
+		right: 54%;
+	}
 
-.tgrow.duo .tgcol.c2 {
-	left: 54%;
+	.tgrow.duo .tgcol.c2 {
+		left: 54%;
+	}
 }
 
 /*
@@ -113,10 +131,11 @@
  ********************************
  * UNO
  */
-.tgrow.uno {
-	padding-top: 66.6%;
+@media (min-width: 768px) {
+	.tgrow.uno {
+		padding-top: 66.6%;
+	}
 }
-
 /*
 
 
@@ -126,15 +145,17 @@
  ********************************
  * MIDLINE
  */
-.tgrow.midline {
-	position: relative;
-}
+@media (min-width: 768px) {
+	.tgrow.midline {
+		position: relative;
+	}
 
-.tgrow.midline .tgcol.c1 {
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	width: auto;
+	.tgrow.midline .tgcol.c1 {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		width: auto;
+	}
 }
 
 /*
