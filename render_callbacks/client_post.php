@@ -33,7 +33,7 @@ function renderPost($post_id) {
         ' . renderImg($post) . '
         <div class="caption">
           ' . renderTag($post) . '
-          <h3>' . $post->post_title . '</h3>
+          <h2>' . $post->post_title . '</h2>
           <div class="subline">
             <span class="author">' . getAuthorName($post) . '</span>
           </div>
