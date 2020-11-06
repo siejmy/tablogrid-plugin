@@ -23,7 +23,7 @@ export function initBlockTablogridUno() {
 		},
 		save: ({ className }) => {
 			return (
-				<div className={className + "tgrow_prnt"}>
+				<div className={className + " tgrow_prnt"}>
 					<div className="tgrow uno">
 						<InnerBlocks.Content />
 					</div>

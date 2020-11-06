@@ -641,7 +641,7 @@ function initBlockTablogridUno() {
     save: function save(_ref2) {
       var className = _ref2.className;
       return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-        className: className + "tgrow_prnt"
+        className: className + " tgrow_prnt"
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
         className: "tgrow uno"
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"].Content, null)));
