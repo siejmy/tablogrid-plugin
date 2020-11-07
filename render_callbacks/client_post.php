@@ -1,5 +1,6 @@
 <?php
 require_once(dirname(__FILE__) . '/util/ImageRenderer.php');
+require_once(dirname(__FILE__) . '/util/TimeAgoRengerer.php');
 
 function siejmy_tablogrid_client_post_render_callback( $block_attributes, $content ) {
     $post_id =$block_attributes['postId'];
@@ -36,6 +37,7 @@ function renderPost($post_id) {
           <h3>' . $post->post_title . '</h3>
           <div class="subline">
             <span class="author">' . getAuthorName($post) . '</span>
+            ' . TimeAgoRengerer::getTimeAgoKatoPL($post, ' &nbsp;◉') . '
           </div>
         </div>
       </a>
