@@ -1,8 +1,8 @@
 <?php
-require_once( ABSPATH . '/wp-content/plugins/siejmycommon/classes/ImageRenderer.php');
-require_once( ABSPATH . '/wp-content/plugins/siejmycommon/classes/TimeAgoRengerer.php');
-
 function siejmy_tablogrid_client_post_render_callback( $block_attributes, $content ) {
+    require_once( ABSPATH . 'wp-content/plugins/siejmycommon-plugin/classes/ImageRenderer.php');
+    require_once( ABSPATH . 'wp-content/plugins/siejmycommon-plugin/classes/TimeAgoRengerer.php');
+
     $post_id =$block_attributes['postId'];
 
     $out = '<div class="tablopost">';
