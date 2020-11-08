@@ -1,8 +1,9 @@
 <?php
 class TimeAgoRengerer {
   static $zdrowaskaS = 20; // 20 seconds
-  static $dziesiatkaRozancaS = 25 * 60; // 25 minutes
-  static $czescRozanzaS = 5 * 60; // 5 minutes
+  static $dziesiatkaRozancaS = 5 * 60; // 5 minutes
+  static $czescRozanzaS = 25 * 60; // 25 minutes
+  static $hourS = 3600;
   static $dayS = 24 * 3600;
   static $weekS = 7 * 24 * 3600;
 
@@ -34,13 +35,19 @@ class TimeAgoRengerer {
       else return $no . ' dziesiątek różańca temu';
     }
     else if ($difference < 11 * self::$czescRozanzaS) {
-      $no = floor($difference / self::$dziesiatkaRozancaS);
+      $no = floor($difference / self::$czescRozanzaS);
       if ($no == 1) return 'Część różańca temu';
       else return $no . ' części różańca temu';
     }
+    else if ($difference < self::$dayS) {
+      $no = floor($difference / self::$hourS);
+      if ($no < 2) return 'Godzinę temu';
+      else if ($no < 5) return $no . ' godziny temu';
+      else return $no . ' godzin temu';
+    }
     else if ($difference < self::$weekS) {
       $no = floor($difference / self::$dayS);
-      if ($no == 1) return 'Wczoraj';
+      if ($no < 2) return 'Wczoraj';
       else return $no . ' dni temu';
     }
     else if ($difference < 4 * self::$weekS) {
