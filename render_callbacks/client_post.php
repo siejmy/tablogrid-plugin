@@ -29,9 +29,14 @@ function renderPost($post_id) {
 
   function renderPostContent($post) {
     $permalink = get_permalink($post);
+    $mediaId     = get_post_thumbnail_id($post);
+    $alt = $post->post_title;
+    $imgRenderer = new ImageRenderer();
+
+    $postHeroStyles = '<style>#posthero_'. $post->ID .' { background-image: url(' . $imgRenderer->getFallbackDataSrc($mediaId) . '); }</style>';
     return '
-    <a class="featpost_a" href="' . $permalink . '">
-        ' . renderImg($post) . '
+    <a class="featpost_a" href="' . $permalink . '" id="posthero_'. $post->ID .'">
+        ' . $imgRenderer->renderImgByAttachmentId($mediaId, $alt) . '
         <div class="caption">
           ' . renderTag($post) . '
           <h3>' . $post->post_title . '</h3>
@@ -41,14 +46,7 @@ function renderPost($post_id) {
           </div>
         </div>
       </a>
-      ';
-  }
-
-  function renderImg($post) {
-    $id     = get_post_thumbnail_id($post);
-    $alt = $post->post_title;
-    $imgRenderer = new ImageRenderer();
-    return $imgRenderer->renderImgByAttachmentId($id, $alt);
+      ' . $postHeroStyles;
   }
 
   function renderTag($post) {

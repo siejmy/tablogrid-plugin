@@ -14,7 +14,7 @@
 require_once dirname(__FILE__) . '/render_callbacks/client_post.php';
 
 function register_thumb_sizes() {
-	add_image_size( 'tablogrid_12', 12 );
+	add_image_size( 'tablogrid_blurry', 10, 10 );
 	add_image_size( 'tablogrid_640', 640 );
 	add_image_size( 'tablogrid_768', 768 );
 	add_image_size( 'tablogrid_1024', 1024 );
