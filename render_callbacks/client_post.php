@@ -1,6 +1,6 @@
 <?php
-require_once(dirname(__FILE__) . '/util/ImageRenderer.php');
-require_once(dirname(__FILE__) . '/util/TimeAgoRengerer.php');
+require_once( ABSPATH . '/wp-content/plugins/siejmycommon/classes/ImageRenderer.php');
+require_once( ABSPATH . '/wp-content/plugins/siejmycommon/classes/TimeAgoRengerer.php');
 
 function siejmy_tablogrid_client_post_render_callback( $block_attributes, $content ) {
     $post_id =$block_attributes['postId'];

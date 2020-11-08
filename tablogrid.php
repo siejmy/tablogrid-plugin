@@ -13,17 +13,6 @@
 
 require_once dirname(__FILE__) . '/render_callbacks/client_post.php';
 
-function register_thumb_sizes() {
-	add_image_size( 'tablogrid_blurry', 10, 10 );
-	add_image_size( 'tablogrid_640', 640 );
-	add_image_size( 'tablogrid_768', 768 );
-	add_image_size( 'tablogrid_1024', 1024 );
-	add_image_size( 'tablogrid_1366', 1366 );
-	add_image_size( 'tablogrid_1600', 1600 );
-	add_image_size( 'tablogrid_1920', 1920 );
-	add_image_size( 'tablogrid_2200', 2200 );
-}
-
 function register_block_type_row_ltb() {
 	register_block_type( 'siejmy/tablogrid-row-ltb', array(
 		'editor_script' => 'siejmy-tablogrid-block-editor',
@@ -122,7 +111,5 @@ function create_block_tablogrid_block_init() {
 	register_block_type_row_midline();
 	register_block_type_column();
 	register_block_type_client_post();
-
-	register_thumb_sizes();
 }
 add_action( 'init', 'create_block_tablogrid_block_init' );
