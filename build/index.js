@@ -196,7 +196,7 @@ function initBlockTablogridClientPost() {
   Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])("siejmy/tablogrid-client-post", {
     title: "Tablogrid Post",
     description: "Single post by ID",
-    category: "layout",
+    category: "widgets",
     icon: "smiley",
     supports: {
       html: false
@@ -211,7 +211,6 @@ function initBlockTablogridClientPost() {
     })(Object(_wordpress_data__WEBPACK_IMPORTED_MODULE_2__["withSelect"])(function (select, _ref) {
       var attributes = _ref.attributes,
           featuredImgId = _ref.featuredImgId;
-      console.log("Loading post", attributes.postId);
       return {
         post: attributes.postId ? select("core").getEntityRecord("postType", "post", attributes.postId) : undefined,
         media: featuredImgId ? select("core").getMedia(featuredImgId) : undefined
@@ -223,10 +222,6 @@ function initBlockTablogridClientPost() {
           attributes = _ref2.attributes,
           setAttributes = _ref2.setAttributes,
           setState = _ref2.setState;
-      console.log({
-        post: post,
-        media: media
-      });
       var featuredMediaImg = post ? post.featured_media : 0;
       setTimeout(function () {
         return setState(function (state) {
@@ -453,7 +448,7 @@ function initBlockTablogridLTB() {
   Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])("siejmy/tablogrid-row-ltb", {
     title: "Tablogrid LTB",
     description: "Left-top-bottom container",
-    category: "widgets",
+    category: "layout",
     icon: "smiley",
     supports: {
       html: false

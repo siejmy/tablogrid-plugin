@@ -1,17 +1,17 @@
-import { registerBlockType } from "@wordpress/blocks";
-import { InnerBlocks } from "@wordpress/block-editor";
+import { registerBlockType } from "@wordpress/blocks"
+import { InnerBlocks } from "@wordpress/block-editor"
 
 export function initBlockTablogridLTB() {
 	const BLOCK_TEMPLATE = [
 		["siejmy/tablogrid-column", { columnIndex: "1" }],
 		["siejmy/tablogrid-column", { columnIndex: "2" }],
 		["siejmy/tablogrid-column", { columnIndex: "3" }],
-	];
+	]
 
 	registerBlockType("siejmy/tablogrid-row-ltb", {
 		title: "Tablogrid LTB",
 		description: "Left-top-bottom container",
-		category: "widgets",
+		category: "layout",
 		icon: "smiley",
 		supports: {
 			html: false,
@@ -23,7 +23,7 @@ export function initBlockTablogridLTB() {
 						<InnerBlocks template={BLOCK_TEMPLATE} templateLock="all" />
 					</div>
 				</div>
-			);
+			)
 		},
 		save: ({ className }) => {
 			return (
@@ -32,7 +32,7 @@ export function initBlockTablogridLTB() {
 						<InnerBlocks.Content />
 					</div>
 				</div>
-			);
+			)
 		},
-	});
+	})
 }
