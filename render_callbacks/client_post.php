@@ -7,7 +7,7 @@ function siejmy_tablogrid_client_post_render_callback( $block_attributes, $conte
 
     $out = '<div class="tablopost">';
           if(empty($post_id)) {
-            $out .= '<span>Wybierz numer ID wpisu edytorze strony</span>';
+            $out .= '<span>Wybierz numer ID wpisu w edytorze strony</span>';
           }
           else {
             $out .= renderPost($post_id);
