@@ -13,6 +13,16 @@
 
 require_once dirname(__FILE__) . '/render_callbacks/client_post.php';
 
+function register_style_time_versioned($name, $localPath) {
+	$dir = dirname( __FILE__ );
+	wp_register_style(
+		$name,
+		plugins_url( $localPath, __FILE__ ),
+		array(),
+		filemtime( "$dir/$localPath" )
+	);
+}
+
 function register_block_type_row_ltb() {
 	register_block_type( 'siejmy/tablogrid-row-ltb', array(
 		'editor_script' => 'siejmy-tablogrid-block-editor',
@@ -88,21 +98,10 @@ function create_block_tablogrid_block_init() {
 		$script_asset['version']
 	);
 
-	$editor_css = 'build/index.css';
-	wp_register_style(
-		'siejmy-tablogrid-block-editor',
-		plugins_url( $editor_css, __FILE__ ),
-		array(),
-		filemtime( "$dir/$editor_css" )
-	);
-
-	$style_css = 'build/style-index.css';
-	wp_register_style(
-		'siejmy-tablogrid-block',
-		plugins_url( $style_css, __FILE__ ),
-		array(),
-		filemtime( "$dir/$style_css" )
-	);
+	register_style_time_versioned('siejmy-tablogrid-block-editor', 'build/index.css');
+	register_style_time_versioned('siejmy-tablogrid-block', 'build/style-index.css');
+	register_style_time_versioned('siejmy-tablogrid-client-post', 'src/styles/client-post.css');
+	register_style_time_versioned('siejmy-tablogrid-client-twitter', 'src/styles/client-twitter.css');
 
 	register_block_type_row_ltb();
 	register_block_type_row_tbr();

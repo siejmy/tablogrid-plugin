@@ -46,7 +46,7 @@ export function initBlockTablogridClientPost() {
 				const imgSrc = media ? media.source_url : placeholderImgSrc
 
 				return (
-					<a className={className + " tablopost"}>
+					<a className={className + " tablogrid_client tablopost"}>
 						<img src={imgSrc} alt="Post image" />
 						<div className="caption">
 							<div className="tag">Kategoria</div>

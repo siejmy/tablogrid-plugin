@@ -232,7 +232,7 @@ function initBlockTablogridClientPost() {
       var placeholderImgSrc = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23cccccc'%3E%3C/rect%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='26px' fill='%23333333'%3Ex%3C/text%3E%3C/svg%3E";
       var imgSrc = media ? media.source_url : placeholderImgSrc;
       return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
-        className: className + " tablopost"
+        className: className + " tablogrid_client tablopost"
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
         src: imgSrc,
         alt: "Post image"

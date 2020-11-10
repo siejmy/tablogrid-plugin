@@ -2,10 +2,11 @@
 function siejmy_tablogrid_client_post_render_callback( $block_attributes, $content ) {
     require_once( ABSPATH . 'wp-content/plugins/siejmycommon-plugin/classes/ImageRenderer.php');
     require_once( ABSPATH . 'wp-content/plugins/siejmycommon-plugin/classes/TimeAgoRengerer.php');
+    wp_enqueue_style('siejmy-tablogrid-client-post');
 
     $post_id =$block_attributes['postId'];
 
-    $out = '<div class="tablopost">';
+    $out = '<div class="tablogrid_client tablopost">';
           if(empty($post_id)) {
             $out .= '<span>Wybierz numer ID wpisu w edytorze strony</span>';
           }
