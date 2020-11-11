@@ -12,6 +12,7 @@
  */
 
 require_once dirname(__FILE__) . '/render_callbacks/client_post.php';
+require_once dirname(__FILE__) . '/render_callbacks/client_twitter.php';
 
 function register_style_time_versioned($name, $localPath) {
 	$dir = dirname( __FILE__ );
@@ -76,7 +77,16 @@ function register_block_type_client_post() {
 		'render_callback' => 'siejmy_tablogrid_client_post_render_callback',
 		'editor_script' => 'siejmy-tablogrid-block-editor',
 		'editor_style'  => 'siejmy-tablogrid-block-editor',
-		'style'         => 'siejmy-tablogrid-block',
+		'style'         => 'siejmy-tablogrid-block', // frontend client styles are enqueued separately in the render hook
+	) );
+}
+
+function register_block_type_client_twitter() {
+	register_block_type( 'siejmy/tablogrid-client-twitter', array(
+		'render_callback' => 'siejmy_tablogrid_client_twitter_render_callback',
+		'editor_script' => 'siejmy-tablogrid-block-editor',
+		'editor_style'  => 'siejmy-tablogrid-block-editor',
+		'style'         => 'siejmy-tablogrid-block', // frontend client styles are enqueued separately in the render hook
 	) );
 }
 
@@ -110,5 +120,6 @@ function create_block_tablogrid_block_init() {
 	register_block_type_row_midline();
 	register_block_type_column();
 	register_block_type_client_post();
+	register_block_type_client_twitter();
 }
 add_action( 'init', 'create_block_tablogrid_block_init' );

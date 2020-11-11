@@ -257,6 +257,114 @@ function initBlockTablogridClientPost() {
 
 /***/ }),
 
+/***/ "./src/client-twitter.js":
+/*!*******************************!*\
+  !*** ./src/client-twitter.js ***!
+  \*******************************/
+/*! exports provided: initBlockTablogridClientTwitter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initBlockTablogridClientTwitter", function() { return initBlockTablogridClientTwitter; });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+function initBlockTablogridClientTwitter() {
+  Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])("siejmy/tablogrid-client-twitter", {
+    title: "Tablogrid Twitter",
+    description: "Wyświetla ostatni tweet z danego konta",
+    category: "widgets",
+    icon: "smiley",
+    supports: {
+      html: false
+    },
+    attributes: {
+      twitterProfile: {
+        type: "string"
+      },
+      bgImageId: {
+        type: "string"
+      },
+      scaleMode: {
+        type: "string"
+      }
+    },
+    edit: Object(_wordpress_data__WEBPACK_IMPORTED_MODULE_4__["withSelect"])(function (select, _ref) {
+      var attributes = _ref.attributes;
+      return {
+        media: attributes.bgImageId ? select("core").getMedia(attributes.bgImageId) : undefined
+      };
+    })(function (_ref2) {
+      var className = _ref2.className,
+          attributes = _ref2.attributes,
+          setAttributes = _ref2.setAttributes,
+          media = _ref2.media;
+      var imgSrc = media ? media.source_url : "";
+      console.log({
+        imgSrc: imgSrc,
+        attributes: attributes
+      });
+      return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+        className: className + " client_twitter tablogrid_client",
+        style: {
+          backgroundImage: "url(" + imgSrc + ")"
+        }
+      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+        className: "media_upload_container"
+      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["MediaUploadCheck"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["MediaUpload"], {
+        onSelect: function onSelect(media) {
+          return setAttributes({
+            bgImageId: media.id.toString()
+          });
+        },
+        allowedTypes: ["image"],
+        value: attributes.bgImageId,
+        render: function render(_ref3) {
+          var open = _ref3.open;
+          return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+            className: "select-media-btn",
+            onClick: open
+          }, "Zmie\u0144 zdj\u0119cie");
+        }
+      }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", null, "Profil Twitter: "), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
+        type: "text",
+        value: attributes.twitterProfile || "",
+        onChange: function onChange(event) {
+          return setAttributes({
+            twitterProfile: event.target.value
+          });
+        }
+      })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", null, "Tryb skalowania: "), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("select", {
+        value: attributes.scaleMode || "medium",
+        onChange: function onChange(event) {
+          return setAttributes({
+            scaleMode: event.target.value
+          });
+        }
+      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
+        value: "medium"
+      }, "\u015Arednia szeroko\u015B\u0107"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
+        value: "full"
+      }, "Pe\u0142na szeroko\u015B\u0107"))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("blockquote", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("i", null, "W\u015Br\xF3d lud\xF3w b\u0119d\u0119 chwali\u0142 Ci\u0119, Panie,", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("br", null), "zagram Ci w\u015Br\xF3d narod\xF3w,", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("br", null), "bo Twoja \u0142askawo\u015B\u0107 [si\u0119ga] a\u017C do niebios,", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("br", null), "a wierno\u015B\u0107 Twoja po chmury.", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("br", null), "B\u0105d\u017A wywy\u017Cszony, Bo\u017Ce, ponad niebo,", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("br", null), "a Twoja chwa\u0142a ponad ca\u0142\u0105 ziemi\u0119!", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("br", null)), "\u2014 Ps 108, 4-6")));
+    })
+  });
+}
+
+/***/ }),
+
 /***/ "./src/column.js":
 /*!***********************!*\
   !*** ./src/column.js ***!
@@ -288,6 +396,8 @@ function initBlockTablogridColumn() {
       }
     },
     supports: {
+      inserter: false,
+      // hide from palette
       html: false
     },
     edit: function edit(_ref) {
@@ -342,6 +452,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _row_uno_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./row-uno.js */ "./src/row-uno.js");
 /* harmony import */ var _column_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./column.js */ "./src/column.js");
 /* harmony import */ var _client_post_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./client-post.js */ "./src/client-post.js");
+/* harmony import */ var _client_twitter_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./client-twitter.js */ "./src/client-twitter.js");
+
 
 
 
@@ -358,6 +470,7 @@ Object(_row_uno_js__WEBPACK_IMPORTED_MODULE_6__["initBlockTablogridUno"])();
 Object(_row_midline_js__WEBPACK_IMPORTED_MODULE_5__["initBlockTablogridMidline"])();
 Object(_row_duo_js__WEBPACK_IMPORTED_MODULE_4__["initBlockTablogridDuo"])();
 Object(_client_post_js__WEBPACK_IMPORTED_MODULE_8__["initBlockTablogridClientPost"])();
+Object(_client_twitter_js__WEBPACK_IMPORTED_MODULE_9__["initBlockTablogridClientTwitter"])();
 
 /***/ }),
 
@@ -665,6 +778,17 @@ function initBlockTablogridUno() {
 /***/ (function(module, exports) {
 
 (function() { module.exports = this["wp"]["blocks"]; }());
+
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!*********************************************!*\
+  !*** external {"this":["wp","components"]} ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["components"]; }());
 
 /***/ }),
 

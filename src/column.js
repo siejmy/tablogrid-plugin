@@ -1,5 +1,5 @@
-import { registerBlockType } from "@wordpress/blocks";
-import { InnerBlocks } from "@wordpress/block-editor";
+import { registerBlockType } from "@wordpress/blocks"
+import { InnerBlocks } from "@wordpress/block-editor"
 
 export function initBlockTablogridColumn() {
 	registerBlockType("siejmy/tablogrid-column", {
@@ -13,6 +13,7 @@ export function initBlockTablogridColumn() {
 			},
 		},
 		supports: {
+			inserter: false, // hide from palette
 			html: false,
 		},
 		edit: ({ className, attributes }) => {
@@ -24,7 +25,7 @@ export function initBlockTablogridColumn() {
 				>
 					<InnerBlocks templateLock={false} />
 				</div>
-			);
+			)
 		},
 		save: ({ className, attributes }) => {
 			return (
@@ -35,7 +36,7 @@ export function initBlockTablogridColumn() {
 				>
 					<InnerBlocks.Content />
 				</div>
-			);
+			)
 		},
-	});
+	})
 }

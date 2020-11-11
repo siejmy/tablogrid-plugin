@@ -76,6 +76,10 @@
 	padding-top: 20%;
 }
 
+.tablogrid_client {
+	z-index: 2;
+}
+
 /*
 
 
@@ -112,4 +116,44 @@ TABLOPOST
 
 .tablopost:hover img {
 	transform: scaleZ(1) scale(1.05);
+}
+
+/***
+Twitter
+*/
+.client_twitter {
+	background: rgb(29, 161, 242);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+	text-align: center;
+	font-size: 12px;
+}
+
+.client_twitter input {
+	max-width: 110px;
+}
+
+.client_twitter .select-media-btn {
+	background: white;
+}
+
+.client_twitter .media_upload_container {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.client_twitter blockquote {
+	width: fit-content;
+	margin: 0 auto;
+	font-size: 11px;
+	line-height: 14px;
+	padding: 5px;
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 5px;
+	color: black;
+	text-shadow: 0 0 0;
+	margin-top: 12px;
 }

@@ -8,6 +8,7 @@ import { initBlockTablogridMidline } from "./row-midline.js"
 import { initBlockTablogridUno } from "./row-uno.js"
 import { initBlockTablogridColumn } from "./column.js"
 import { initBlockTablogridClientPost } from "./client-post.js"
+import { initBlockTablogridClientTwitter } from "./client-twitter.js"
 
 initBlockTablogridColumn()
 initBlockTablogridLTB()
@@ -16,3 +17,4 @@ initBlockTablogridUno()
 initBlockTablogridMidline()
 initBlockTablogridDuo()
 initBlockTablogridClientPost()
+initBlockTablogridClientTwitter()
