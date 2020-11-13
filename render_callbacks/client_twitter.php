@@ -14,7 +14,7 @@ function siejmy_tablogrid_client_twitter_render_callback( $block_attributes, $co
     'mediaId' => $bgImageId,
     'alt' => 'Tło do twittera @' . $twitterProfile,
     'elementId' => 'tablogrid_last_tweet_' . $twitterProfile,
-    'tag' => 'div',
+    'tag' => 'aside',
     'caption' => renderTwitterHeroContent($twitterProfile),
     'cssClass' => 'tablogrid_client tablogrid_last_tweet scale_' . $scaleMode,
   ));

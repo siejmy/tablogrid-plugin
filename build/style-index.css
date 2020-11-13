@@ -145,5 +145,8 @@
     margin-right: auto;
     width: auto; } }
 
+.tgrow.midline h2 {
+  text-align: center; }
+
 
 /*# sourceMappingURL=style-index.css.map*/

@@ -5,150 +5,129 @@
  * Replace them with your own styles or remove the file completely.
  */
 .tablopost {
-  color: white; }
-
-.tablopost::after {
-  content: "";
-  position: absolute;
-  height: 80%;
-  width: 100%;
-  top: 20%;
-  left: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%);
-  opacity: 1;
-  transition: all 0.5s ease; }
-
-.tablopost:hover::after {
-  opacity: 0; }
+	color: white;
+}
 
 .tablopost .featpost_a {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.tablopost .featpost_a::after {
+	content: "";
+	position: absolute;
+	height: 80%;
+	width: 100%;
+	top: 20%;
+	left: 0;
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0) 20%,
+		rgba(0, 0, 0, 0.8) 100%
+	);
+	opacity: 1;
+	transition: all 0.5s ease;
+}
+
+.tablopost:hover .featpost_a::after {
+	opacity: 0;
+}
 
 .tablopost amp-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover; }
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
 
 .tablopost amp-img > img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: all 0.5s ease; }
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	transition: all 0.5s ease;
+}
 
 .tablopost:hover amp-img > img {
-  transform: scaleZ(1) scale(1.05); }
+	transform: scaleZ(1) scale(1.05);
+}
 
-.tablopost .caption {
-  display: block;
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-  right: 1rem;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  z-index: 2;
-  font-size: 12px;
-  letter-spacing: 0.1rem;
-  transition: all 0.5s ease; }
-
-.tablopost:hover .caption {
-  opacity: 0.2; }
-
-.tablopost .caption h3 {
-  font-weight: 900;
-  font-size: 50px;
-  line-height: 1.25;
-  letter-spacing: 1px;
-  margin: 0.5rem 0;
-  text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5); }
-
-.tablopost .caption .subline {
-  font-weight: 900;
-  font-size: 12px;
-  letter-spacing: 0.1rem;
-  opacity: 0.75;
-  text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.25); }
-
-.tablopost .caption .subline .time {
-  font-weight: 400;
-  opacity: 0.75; }
-
-.tablopost .caption .tag {
-  display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0.25rem;
-  background: #3ace00;
-  color: white;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25); }
+.tablopost:hover .herocaption {
+	opacity: 0.7;
+}
 
 .tablogrid_last_tweet {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-decoration: none;
-  color: white;
-  overflow: hidden; }
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-decoration: none;
+	color: white;
+	overflow: hidden;
+}
 
 .tablogrid_last_tweet amp-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: all 0.5s ease; }
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	transition: all 0.5s ease;
+}
 
 .tablogrid_last_tweet amp-img img {
-  -o-object-fit: cover;
-     object-fit: cover; }
+	-o-object-fit: cover;
+	object-fit: cover;
+}
 
 .tablogrid_last_tweet::after {
-  content: "";
-  background: rgba(255, 255, 255, 0.33);
-  position: absolute;
-  width: 100%;
-  height: 100%; }
+	content: "";
+	background: rgba(255, 255, 255, 0.33);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
 
 .tablogrid_last_tweet .last_tweet_content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
-  z-index: 2; }
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 1rem;
+	z-index: 2;
+}
 
 .tablogrid_last_tweet .last_tweet_content > div {
-  width: 100%;
-  -webkit-backdrop-filter: blur(7px);
-          backdrop-filter: blur(7px); }
+	width: 100%;
+	-webkit-backdrop-filter: blur(7px);
+	backdrop-filter: blur(7px);
+}
 
 @media (min-width: 768px) {
-  .tablogrid_last_tweet .last_tweet_content > div {
-    width: 80%; } }
+	.tablogrid_last_tweet .last_tweet_content > div {
+		width: 80%;
+	}
+}
 
 @media (min-width: 1024px) {
-  .tablogrid_last_tweet .last_tweet_content > div {
-    width: 66%; } }
+	.tablogrid_last_tweet .last_tweet_content > div {
+		width: 66%;
+	}
+}
 
 /*
 1. This folder exports separate styles for the editor styles
@@ -157,69 +136,70 @@
    and wp_enqueue_style
  */
 .tgrow_prnt {
-  padding-left: 0;
-  padding-right: 0; }
+	padding-left: 0;
+	padding-right: 0;
+}
 
 .wp-block-siejmy-tablogrid {
-  border: 1px dotted #f00; }
+	border: 1px dotted #f00;
+}
 
-.tgrow > .block-editor-inner-blocks {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  padding: 0; }
-
-.tgrow > .block-editor-inner-blocks > .block-editor-block-list__layout {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  padding: 0; }
-
+.tgrow > .block-editor-inner-blocks,
+.tgrow > .block-editor-inner-blocks > .block-editor-block-list__layout,
 .tgrow
-> .block-editor-inner-blocks
-> .block-editor-block-list__layout
-> .block-editor-block-list__block {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  padding: 0; }
-
-.tgrow
-> .block-editor-inner-blocks
-> .block-editor-block-list__layout
-> .block-editor-block-list__block
-> .tgcol {
-  border: 1px dotted blue;
-  z-index: 2; }
-
+	> .block-editor-inner-blocks
+	> .block-editor-block-list__layout
+	> .block-editor-block-list__block,
 .tgcol > .block-editor-inner-blocks,
 .tgcol > .block-editor-inner-blocks > .block-editor-block-list__layout,
 .tgcol
-> .block-editor-inner-blocks
-> .block-editor-block-list__layout
-> .block-editor-block-list__block {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  padding: 0; }
+	> .block-editor-inner-blocks
+	> .block-editor-block-list__layout
+	> .block-editor-block-list__block {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.tgrow.midline > .block-editor-inner-blocks,
+.tgrow.midline > .block-editor-inner-blocks > .block-editor-block-list__layout,
+.tgrow.midline
+	> .block-editor-inner-blocks
+	> .block-editor-block-list__layout
+	> .block-editor-block-list__block,
+.tgrow.midline .tgcol > .block-editor-inner-blocks,
+.tgrow.midline
+	.tgcol
+	> .block-editor-inner-blocks
+	> .block-editor-block-list__layout,
+.tgrow.midline
+	.tgcol
+	> .block-editor-inner-blocks
+	> .block-editor-block-list__layout
+	> .block-editor-block-list__block {
+	position: relative;
+}
+
+.tgrow
+	> .block-editor-inner-blocks
+	> .block-editor-block-list__layout
+	> .block-editor-block-list__block
+	> .tgcol {
+	border: 1px dotted blue;
+	z-index: 2;
+}
 
 .tgrow.midline {
-  padding-top: 20%; }
+	padding-top: 20%;
+}
 
 .tablogrid_client {
-  z-index: 2; }
+	z-index: 2;
+}
 
 /*
 
@@ -231,66 +211,76 @@
 
 TABLOPOST
 */
-.tablopost:hover .caption {
-  opacity: 1; }
+.tablopost .caption {
+	opacity: 1;
+	position: relative;
+}
 
 .tablopost img {
-  height: 100% !important; }
+	height: 100% !important;
+}
 
 .tablopost .subline input {
-  font-size: 10px;
-  height: 20px;
-  min-height: 20px;
-  width: 50px;
-  min-width: 50px; }
+	font-size: 10px;
+	height: 20px;
+	min-height: 20px;
+	width: 50px;
+	min-width: 50px;
+}
 
 .tablopost img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: all 0.5s ease; }
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	transition: all 0.5s ease;
+}
 
 .tablopost:hover img {
-  transform: scaleZ(1) scale(1.05); }
+	transform: scaleZ(1) scale(1.05);
+}
 
 /***
 Twitter
 */
 .client_twitter {
-  background: #1da1f2;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
-  text-align: center;
-  font-size: 12px; }
+	background: #1da1f2;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+	text-align: center;
+	font-size: 12px;
+}
 
 .client_twitter input {
-  max-width: 110px; }
+	max-width: 110px;
+}
 
 .client_twitter .select-media-btn {
-  background: white; }
+	background: white;
+}
 
 .client_twitter .media_upload_container {
-  margin-top: 10px;
-  text-align: center; }
+	margin-top: 10px;
+	text-align: center;
+}
 
 .client_twitter blockquote {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  font-size: 11px;
-  line-height: 14px;
-  padding: 5px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 5px;
-  color: black;
-  text-shadow: 0 0 0;
-  margin-top: 12px; }
-
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	margin: 0 auto;
+	font-size: 11px;
+	line-height: 14px;
+	padding: 5px;
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 5px;
+	color: black;
+	text-shadow: 0 0 0;
+	margin-top: 12px;
+}
 
 /*# sourceMappingURL=index.css.map*/

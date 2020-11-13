@@ -4,16 +4,14 @@ function siejmy_tablogrid_client_post_render_callback( $block_attributes, $conte
     require_once( ABSPATH . 'wp-content/plugins/siejmycommon-plugin/classes/HeroCaptionRenderer.php');
     wp_enqueue_style('siejmy-tablogrid-client-post');
 
-    $post_id =$block_attributes['postId'];
-
-    $out = '<div class="tablogrid_client tablopost">';
-    if(empty($post_id)) {
+    $out = '<article class="tablogrid_client tablopost">';
+    if(empty($block_attributes['postId'])) {
       $out .= '<span>Wybierz numer ID wpisu w edytorze strony</span>';
     }
     else {
-      $out .= renderPost($post_id);
+      $out .= renderPost($block_attributes['postId']);
     }
-    $out .= '</div>';
+    $out .= '</article>';
     return  $out;
 }
 
@@ -40,6 +38,8 @@ function renderPost($post_id) {
       'alt' => $alt,
       'href' => $permalink,
       'elementId' => 'tablopost_' . $post->ID,
-      'caption' => $captionRenderer->render($post),
+      'caption' => $captionRenderer->render($post, array(
+        'titleTag' => 'h3',
+      )),
     ));
   }

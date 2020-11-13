@@ -29,6 +29,7 @@
 .tablopost:hover::after {
 	opacity: 0;
 }
+
 .tablopost .featpost_a {
 	position: absolute;
 	top: 0;
