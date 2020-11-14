@@ -59,7 +59,3 @@
 .tablopost:hover amp-img > img {
 	transform: scaleZ(1) scale(1.05);
 }
-
-.tablopost:hover .herocaption {
-	opacity: 0.7;
-}
