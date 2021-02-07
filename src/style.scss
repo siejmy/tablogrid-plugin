@@ -7,7 +7,7 @@
 
 .tgrow_prnt {
 	width: 100%;
-	max-width: 1300px;
+	max-width: var(--content-max-width);
 	margin: 0 auto;
 	padding-left: 4%;
 	padding-right: 4%;
