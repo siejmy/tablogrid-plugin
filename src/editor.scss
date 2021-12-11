@@ -86,7 +86,7 @@
 	> .block-editor-block-list__layout
 	> .block-editor-block-list__block
 	> .tgcol::after {
-	content: "błąd: BLOK W BLOKU";
+	content: "err: BLOK W BLOKU";
 	display: block;
 	position: absolute;
 	z-index: 4;
@@ -94,7 +94,7 @@
 	color: white;
 	font-size: 10px;
 	width: 120px;
-	height: 12px;
+	height: 13px;
 	text-align: center;
 }
 
@@ -134,6 +134,12 @@ TABLOPOST
 .tablopost .caption {
 	opacity: 1;
 	position: relative;
+}
+
+.tablopost .herocaption {
+	left: 0.5rem !important;
+	bottom: 0.5rem !important;
+	right: 0.5rem !important;
 }
 
 .tablopost h3 {
