@@ -59,8 +59,43 @@
 	> .block-editor-block-list__layout
 	> .block-editor-block-list__block
 	> .tgcol {
-	border: 1px dotted blue;
+	border: 3px dotted rgb(34, 32, 134);
 	z-index: 2;
+}
+
+.tgrow /* Indicated tablogrid within tablogrid */
+	> .block-editor-inner-blocks
+	> .block-editor-block-list__layout
+	> .block-editor-block-list__block
+	> .tgcol
+	.tgrow
+	> .block-editor-inner-blocks
+	> .block-editor-block-list__layout
+	> .block-editor-block-list__block
+	> .tgcol {
+	border: 10px solid red;
+}
+
+.tgrow /* Indicated tablogrid within tablogrid */
+	> .block-editor-inner-blocks
+	> .block-editor-block-list__layout
+	> .block-editor-block-list__block
+	> .tgcol
+	.tgrow
+	> .block-editor-inner-blocks
+	> .block-editor-block-list__layout
+	> .block-editor-block-list__block
+	> .tgcol::after {
+	content: "błąd: BLOK W BLOKU";
+	display: block;
+	position: absolute;
+	z-index: 4;
+	background: red;
+	color: white;
+	font-size: 10px;
+	width: 120px;
+	height: 12px;
+	text-align: center;
 }
 
 .tgrow.midline {
@@ -69,6 +104,21 @@
 
 .tablogrid_client {
 	z-index: 2;
+	border: 3px dotted rgb(32, 127, 134);
+	min-height: 50px;
+}
+
+.tablogrid_client::after {
+	content: "CONTENT";
+	display: block;
+	position: absolute;
+	z-index: 4;
+	background: red;
+	color: white;
+	font-size: 6px;
+	width: 30px;
+	height: 7px;
+	text-align: center;
 }
 
 /*
@@ -84,6 +134,10 @@ TABLOPOST
 .tablopost .caption {
 	opacity: 1;
 	position: relative;
+}
+
+.tablopost h3 {
+	margin: 0 !important;
 }
 
 .tablopost img {
