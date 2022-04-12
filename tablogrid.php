@@ -108,8 +108,8 @@ function create_block_tablogrid_block_init() {
 		$script_asset['version']
 	);
 
-	// register_style_time_versioned('siejmy-tablogrid-block-editor', 'build/index.css');
-	// register_style_time_versioned('siejmy-tablogrid-block', 'build/style-index.css');
+	register_style_time_versioned('siejmy-tablogrid-block-editor', 'build/index.css');
+	register_style_time_versioned('siejmy-tablogrid-block', 'build/style-index.css');
 	register_style_time_versioned('siejmy-tablogrid-client-post', 'src/styles/client-post.css');
 	register_style_time_versioned('siejmy-tablogrid-client-twitter', 'src/styles/client-twitter.css');
 
