@@ -7,3 +7,4 @@ const compileSass = (name) => fs.writeFileSync(`${dstdir}/${name}.css`, sass.com
 compileSass('editor');
 compileSass('client-post');
 compileSass('client-twitter');
+compileSass('frontend-mixin'); // should compile to empty file, but compilation will validate scss

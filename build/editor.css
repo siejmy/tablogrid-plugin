@@ -115,6 +115,341 @@
     width: 66%;
   }
 }
+.tgrow .tgcol .tablogrid_client {
+  width: 100%;
+  position: relative;
+  contain: strict;
+}
+
+.tgrow_prnt {
+  margin: 0 auto;
+  width: 92vw;
+}
+.tgrow_prnt .tgrow {
+  margin: 0;
+  padding: 0;
+}
+.tgrow_prnt .tgrow .tgcol {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4vw;
+}
+.tgrow_prnt .tgrow .tgcol .tablogrid_client {
+  height: 139.3939393939vw;
+}
+
+.spacer-row-1 {
+  width: 100%;
+  height: 4vw;
+}
+
+.spacer-row-2 {
+  width: 100%;
+  height: 8vw;
+}
+
+@media (min-width: 500px) {
+  .tgrow_prnt {
+    width: auto;
+  }
+
+  .tgrow .tgcol {
+    margin-bottom: 0;
+  }
+
+  .tgrow_prnt {
+    margin: 0 auto;
+  }
+  .tgrow_prnt .tgrow {
+    display: grid;
+  }
+  .tgrow_prnt .tgrow.uno {
+    grid-template-columns: 100%;
+  }
+  .tgrow_prnt .tgrow.tbr .tgcol.c1 {
+    grid-row: 1/1;
+    grid-column: 1/1;
+  }
+  .tgrow_prnt .tgrow.tbr .tgcol.c2 {
+    grid-row: 2/2;
+    grid-column: 1/1;
+  }
+  .tgrow_prnt .tgrow.tbr .tgcol.c3 {
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    grid-column: 2/2;
+  }
+  .tgrow_prnt .tgrow.ltb .tgcol.c1 {
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    grid-column: 1/1;
+  }
+  .tgrow_prnt .tgrow.ltb .tgcol.c2 {
+    grid-row: 1/1;
+    grid-column: 2/2;
+  }
+  .tgrow_prnt .tgrow.ltb .tgcol.c3 {
+    grid-row: 2/2;
+    grid-column: 2/2;
+  }
+
+  .spacer-row-1,
+.spacer-row-2 {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 500px) {
+  .tgrow_prnt {
+    width: 460px;
+    margin-bottom: 40px;
+  }
+  .tgrow_prnt .tgrow {
+    row-gap: 40px;
+    column-gap: 40px;
+  }
+
+  .tgrow.uno {
+    grid-template-rows: 306.6666666667px;
+  }
+  .tgrow.uno .tgcol .tablogrid_client {
+    height: 306.6666666667px;
+  }
+
+  .tgrow.duo {
+    grid-template-columns: 210px 210px;
+    grid-template-rows: 140px;
+  }
+  .tgrow.duo .tgcol .tablogrid_client {
+    height: 140px;
+  }
+
+  .tgrow.tbr {
+    grid-template-columns: 210px 210px;
+    grid-template-rows: 140px 140px;
+  }
+  .tgrow.tbr .tgcol.c1 .tablogrid_client {
+    height: 140px;
+  }
+  .tgrow.tbr .tgcol.c2 .tablogrid_client {
+    height: 140px;
+  }
+  .tgrow.tbr .tgcol.c3 .tablogrid_client {
+    height: 320px;
+  }
+
+  .tgrow.ltb {
+    grid-template-columns: 210px 210px;
+    grid-template-rows: 140px 140px;
+  }
+  .tgrow.ltb .tgcol.c1 .tablogrid_client {
+    height: 320px;
+  }
+  .tgrow.ltb .tgcol.c2 .tablogrid_client {
+    height: 140px;
+  }
+  .tgrow.ltb .tgcol.c3 .tablogrid_client {
+    height: 140px;
+  }
+
+  .spacer-row-1 {
+    width: 460px;
+    height: 40px;
+  }
+
+  .spacer-row-2 {
+    width: 460px;
+    height: 80px;
+  }
+}
+@media (min-width: 600px) {
+  .tgrow_prnt {
+    width: 552px;
+    margin-bottom: 48px;
+  }
+  .tgrow_prnt .tgrow {
+    row-gap: 48px;
+    column-gap: 48px;
+  }
+
+  .tgrow.uno {
+    grid-template-rows: 368px;
+  }
+  .tgrow.uno .tgcol .tablogrid_client {
+    height: 368px;
+  }
+
+  .tgrow.duo {
+    grid-template-columns: 252px 252px;
+    grid-template-rows: 168px;
+  }
+  .tgrow.duo .tgcol .tablogrid_client {
+    height: 168px;
+  }
+
+  .tgrow.tbr {
+    grid-template-columns: 252px 252px;
+    grid-template-rows: 168px 168px;
+  }
+  .tgrow.tbr .tgcol.c1 .tablogrid_client {
+    height: 168px;
+  }
+  .tgrow.tbr .tgcol.c2 .tablogrid_client {
+    height: 168px;
+  }
+  .tgrow.tbr .tgcol.c3 .tablogrid_client {
+    height: 384px;
+  }
+
+  .tgrow.ltb {
+    grid-template-columns: 252px 252px;
+    grid-template-rows: 168px 168px;
+  }
+  .tgrow.ltb .tgcol.c1 .tablogrid_client {
+    height: 384px;
+  }
+  .tgrow.ltb .tgcol.c2 .tablogrid_client {
+    height: 168px;
+  }
+  .tgrow.ltb .tgcol.c3 .tablogrid_client {
+    height: 168px;
+  }
+
+  .spacer-row-1 {
+    width: 552px;
+    height: 48px;
+  }
+
+  .spacer-row-2 {
+    width: 552px;
+    height: 96px;
+  }
+}
+@media (min-width: 700px) {
+  .tgrow_prnt {
+    width: 644px;
+    margin-bottom: 56px;
+  }
+  .tgrow_prnt .tgrow {
+    row-gap: 56px;
+    column-gap: 56px;
+  }
+
+  .tgrow.uno {
+    grid-template-rows: 429.3333333333px;
+  }
+  .tgrow.uno .tgcol .tablogrid_client {
+    height: 429.3333333333px;
+  }
+
+  .tgrow.duo {
+    grid-template-columns: 294px 294px;
+    grid-template-rows: 196px;
+  }
+  .tgrow.duo .tgcol .tablogrid_client {
+    height: 196px;
+  }
+
+  .tgrow.tbr {
+    grid-template-columns: 294px 294px;
+    grid-template-rows: 196px 196px;
+  }
+  .tgrow.tbr .tgcol.c1 .tablogrid_client {
+    height: 196px;
+  }
+  .tgrow.tbr .tgcol.c2 .tablogrid_client {
+    height: 196px;
+  }
+  .tgrow.tbr .tgcol.c3 .tablogrid_client {
+    height: 448px;
+  }
+
+  .tgrow.ltb {
+    grid-template-columns: 294px 294px;
+    grid-template-rows: 196px 196px;
+  }
+  .tgrow.ltb .tgcol.c1 .tablogrid_client {
+    height: 448px;
+  }
+  .tgrow.ltb .tgcol.c2 .tablogrid_client {
+    height: 196px;
+  }
+  .tgrow.ltb .tgcol.c3 .tablogrid_client {
+    height: 196px;
+  }
+
+  .spacer-row-1 {
+    width: 644px;
+    height: 56px;
+  }
+
+  .spacer-row-2 {
+    width: 644px;
+    height: 112px;
+  }
+}
+@media (min-width: 800px) {
+  .tgrow_prnt {
+    width: 736px;
+    margin-bottom: 64px;
+  }
+  .tgrow_prnt .tgrow {
+    row-gap: 64px;
+    column-gap: 64px;
+  }
+
+  .tgrow.uno {
+    grid-template-rows: 490.6666666667px;
+  }
+  .tgrow.uno .tgcol .tablogrid_client {
+    height: 490.6666666667px;
+  }
+
+  .tgrow.duo {
+    grid-template-columns: 336px 336px;
+    grid-template-rows: 224px;
+  }
+  .tgrow.duo .tgcol .tablogrid_client {
+    height: 224px;
+  }
+
+  .tgrow.tbr {
+    grid-template-columns: 336px 336px;
+    grid-template-rows: 224px 224px;
+  }
+  .tgrow.tbr .tgcol.c1 .tablogrid_client {
+    height: 224px;
+  }
+  .tgrow.tbr .tgcol.c2 .tablogrid_client {
+    height: 224px;
+  }
+  .tgrow.tbr .tgcol.c3 .tablogrid_client {
+    height: 512px;
+  }
+
+  .tgrow.ltb {
+    grid-template-columns: 336px 336px;
+    grid-template-rows: 224px 224px;
+  }
+  .tgrow.ltb .tgcol.c1 .tablogrid_client {
+    height: 512px;
+  }
+  .tgrow.ltb .tgcol.c2 .tablogrid_client {
+    height: 224px;
+  }
+  .tgrow.ltb .tgcol.c3 .tablogrid_client {
+    height: 224px;
+  }
+
+  .spacer-row-1 {
+    width: 736px;
+    height: 64px;
+  }
+
+  .spacer-row-2 {
+    width: 736px;
+    height: 128px;
+  }
+}
 .tgrow_prnt {
   padding-left: 0;
   padding-right: 0;

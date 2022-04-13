@@ -1,0 +1,23 @@
+@import "grid/index";
+/* should compile to empty file, but compilation will validate scss */
+/*
+  Themes using tablogrid should directly @import "./path/to/tablogrid-plugin/scss/frontend-mixin.scss"
+  and then reconfigure it with desired variables
+*/
+
+@mixin tablogrid($desktop-min-width,
+  $desktop-max-width,
+  $breakpoint-step,
+  $gutter-fraction-desktop,
+  $gutter-fraction-mobile,
+  $cell-width-to-height-ratio-desktop,
+  $cell-width-to-height-ratio-mobile) {
+  // re-export for ability to extend
+  @include grid($desktop-min-width: $desktop-min-width,
+    $desktop-max-width: $desktop-max-width,
+    $breakpoint-step: $breakpoint-step,
+    $gutter-fraction-desktop: $gutter-fraction-desktop,
+    $gutter-fraction-mobile: $gutter-fraction-mobile,
+    $cell-width-to-height-ratio-desktop: $cell-width-to-height-ratio-desktop,
+    $cell-width-to-height-ratio-mobile: $cell-width-to-height-ratio-mobile);
+}

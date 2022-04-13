@@ -1,6 +1,6 @@
 @use "sass:math";
 
-@mixin tablogrid-for-screen-width($screenBreak, $gutterFrac, $cellRatio) {
+@mixin grid-for-screen-width($screenBreak, $gutterFrac, $cellRatio) {
   $rowWidth: ((1-$gutterFrac)) * $screenBreak;
   $gutterSize: $gutterFrac * $screenBreak;
   $singleCellHeight: math.div($rowWidth, $cellRatio);

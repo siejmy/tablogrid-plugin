@@ -1,6 +1,6 @@
 @use "sass:math";
 
-@mixin tablogrid-mobile($gutterFrac, $cellRatio) {
+@mixin grid-mobile($gutterFrac, $cellRatio) {
   $percentGutter: $gutterFrac * 100;
   $contentWidth: (100 - 2 * $percentGutter) * 1vw;
   $cellHeight: math.div($contentWidth, $cellRatio);
@@ -36,7 +36,7 @@
   }
 }
 
-@mixin tablogrid-mobile-disabler {
+@mixin grid-mobile-disabler {
   .tgrow_prnt {
     width: auto;
   }

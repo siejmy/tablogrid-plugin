@@ -6,6 +6,15 @@
 
 @import "client-post";
 @import "client-twitter";
+@import "grid/index";
+
+@include grid($desktop-min-width: 500px,
+  $desktop-max-width: 800px,
+  $breakpoint-step: 100px,
+  $gutter-fraction-desktop: 0.08,
+  $gutter-fraction-mobile: 0.04,
+  $cell-width-to-height-ratio-desktop: 1.5,
+  $cell-width-to-height-ratio-mobile: 0.66);
 
 .tgrow_prnt {
   padding-left: 0;

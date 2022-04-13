@@ -1,0 +1,5 @@
+/* should compile to empty file, but compilation will validate scss */
+/*
+  Themes using tablogrid should directly @import "./path/to/tablogrid-plugin/scss/frontend-mixin.scss"
+  and then reconfigure it with desired variables
+*/
