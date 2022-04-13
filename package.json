@@ -1,8 +1,8 @@
 {
 	"name": "tablogrid",
 	"version": "0.1.0",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
-	"author": "The WordPress Contributors",
+	"description": "Tabloid style grid for wordpress",
+	"author": "Jędrzej Bogumił Lewandowski <jedrzejblew@gmail.com>",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {
