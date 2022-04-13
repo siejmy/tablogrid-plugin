@@ -21,24 +21,32 @@
   padding-right: 0;
 }
 
+// .tgrow {
+//   position: relative;
+
+//   .tgcol {
+//     position: relative;
+//   }
+// }
+
 .wp-block-siejmy-tablogrid {
   border: 1px dotted #f00;
 }
 
-/*.tgrow>.block-editor-inner-blocks,
+.tgrow>.block-editor-inner-blocks,
 .tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout,
 .tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block,
 .tgcol>.block-editor-inner-blocks,
 .tgcol>.block-editor-inner-blocks>.block-editor-block-list__layout,
 .tgcol>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
   margin: 0;
   padding: 0;
-}*/
+}
 
 .tgrow.midline>.block-editor-inner-blocks,
 .tgrow.midline>.block-editor-inner-blocks>.block-editor-block-list__layout,
