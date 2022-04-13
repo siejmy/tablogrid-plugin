@@ -28,7 +28,6 @@ function register_block_type_row_ltb() {
 	register_block_type( 'siejmy/tablogrid-row-ltb', array(
 		'editor_script' => 'siejmy-tablogrid-block-editor',
 		'editor_style'  => 'siejmy-tablogrid-block-editor',
-		'style'         => 'siejmy-tablogrid-block',
 	) );
 }
 
@@ -36,7 +35,6 @@ function register_block_type_row_tbr() {
 	register_block_type( 'siejmy/tablogrid-row-tbr', array(
 		'editor_script' => 'siejmy-tablogrid-block-editor',
 		'editor_style'  => 'siejmy-tablogrid-block-editor',
-		'style'         => 'siejmy-tablogrid-block',
 	) );
 }
 
@@ -44,7 +42,6 @@ function register_block_type_row_uno() {
 	register_block_type( 'siejmy/tablogrid-row-uno', array(
 		'editor_script' => 'siejmy-tablogrid-block-editor',
 		'editor_style'  => 'siejmy-tablogrid-block-editor',
-		'style'         => 'siejmy-tablogrid-block',
 	) );
 }
 
@@ -52,7 +49,6 @@ function register_block_type_row_duo() {
 	register_block_type( 'siejmy/tablogrid-row-duo', array(
 		'editor_script' => 'siejmy-tablogrid-block-editor',
 		'editor_style'  => 'siejmy-tablogrid-block-editor',
-		'style'         => 'siejmy-tablogrid-block',
 	) );
 }
 
@@ -60,7 +56,6 @@ function register_block_type_row_midline() {
 	register_block_type( 'siejmy/tablogrid-row-midline', array(
 		'editor_script' => 'siejmy-tablogrid-block-editor',
 		'editor_style'  => 'siejmy-tablogrid-block-editor',
-		'style'         => 'siejmy-tablogrid-block',
 	) );
 }
 
@@ -68,7 +63,6 @@ function register_block_type_column() {
 	register_block_type( 'siejmy/tablogrid-column', array(
 		'editor_script' => 'siejmy-tablogrid-block-editor',
 		'editor_style'  => 'siejmy-tablogrid-block-editor',
-		'style'         => 'siejmy-tablogrid-block',
 	) );
 }
 
@@ -77,7 +71,6 @@ function register_block_type_client_post() {
 		'render_callback' => 'siejmy_tablogrid_client_post_render_callback',
 		'editor_script' => 'siejmy-tablogrid-block-editor',
 		'editor_style'  => 'siejmy-tablogrid-block-editor',
-		'style'         => 'siejmy-tablogrid-block', // frontend client styles are enqueued separately in the render hook
 	) );
 }
 
@@ -86,7 +79,6 @@ function register_block_type_client_twitter() {
 		'render_callback' => 'siejmy_tablogrid_client_twitter_render_callback',
 		'editor_script' => 'siejmy-tablogrid-block-editor',
 		'editor_style'  => 'siejmy-tablogrid-block-editor',
-		'style'         => 'siejmy-tablogrid-block', // frontend client styles are enqueued separately in the render hook
 	) );
 }
 
@@ -108,10 +100,9 @@ function create_block_tablogrid_block_init() {
 		$script_asset['version']
 	);
 
-	register_style_time_versioned('siejmy-tablogrid-block-editor', 'build/index.css');
-	register_style_time_versioned('siejmy-tablogrid-block', 'build/style-index.css');
-	register_style_time_versioned('siejmy-tablogrid-client-post', 'src/styles/client-post.css');
-	register_style_time_versioned('siejmy-tablogrid-client-twitter', 'src/styles/client-twitter.css');
+	register_style_time_versioned('siejmy-tablogrid-block-editor', 'build/editor.css');
+	register_style_time_versioned('siejmy-tablogrid-client-post', 'build/client-post.css');
+	register_style_time_versioned('siejmy-tablogrid-client-twitter', 'build/client-twitter.css');
 
 	register_block_type_row_ltb();
 	register_block_type_row_tbr();
