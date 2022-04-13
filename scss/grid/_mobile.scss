@@ -17,6 +17,7 @@
         margin: 0;
         padding: 0;
         margin-bottom: $percentGutter * 1vw;
+        height: $cellHeight;
 
         .tablogrid_client {
           height: $cellHeight;

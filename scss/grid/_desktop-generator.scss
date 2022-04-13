@@ -22,6 +22,8 @@
     grid-template-rows: $singleCellHeight;
 
     .tgcol {
+      height: $singleCellHeight;
+
       .tablogrid_client {
         height: $singleCellHeight;
       }
@@ -33,6 +35,8 @@
     grid-template-rows: $doubleCellHeight;
 
     .tgcol {
+      height: $doubleCellHeight;
+
       .tablogrid_client {
         height: $doubleCellHeight;
       }
@@ -44,18 +48,24 @@
     grid-template-rows: $doubleCellHeight $doubleCellHeight;
 
     .tgcol.c1 {
+      height: $doubleCellHeight;
+
       .tablogrid_client {
         height: $doubleCellHeight;
       }
     }
 
     .tgcol.c2 {
+      height: $doubleCellHeight;
+
       .tablogrid_client {
         height: $doubleCellHeight;
       }
     }
 
     .tgcol.c3 {
+      height: $doubleContainerHeight;
+
       .tablogrid_client {
         height: $doubleContainerHeight;
       }
@@ -67,18 +77,24 @@
     grid-template-rows: $doubleCellHeight $doubleCellHeight;
 
     .tgcol.c1 {
+      height: $doubleContainerHeight;
+
       .tablogrid_client {
         height: $doubleContainerHeight;
       }
     }
 
     .tgcol.c2 {
+      height: $doubleCellHeight;
+
       .tablogrid_client {
         height: $doubleCellHeight;
       }
     }
 
     .tgcol.c3 {
+      height: $doubleCellHeight;
+
       .tablogrid_client {
         height: $doubleCellHeight;
       }
