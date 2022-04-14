@@ -20,6 +20,7 @@
 
   .tgrow.uno {
     grid-template-rows: $singleCellHeight;
+    height: $singleCellHeight;
 
     .tgcol {
       height: $singleCellHeight;
@@ -33,6 +34,7 @@
   .tgrow.duo {
     grid-template-columns: $doubleCellWidth $doubleCellWidth;
     grid-template-rows: $doubleCellHeight;
+    height: $doubleCellHeight;
 
     .tgcol {
       height: $doubleCellHeight;
@@ -46,6 +48,7 @@
   .tgrow.tbr {
     grid-template-columns: $doubleCellWidth $doubleCellWidth;
     grid-template-rows: $doubleCellHeight $doubleCellHeight;
+    height: $doubleContainerHeight;
 
     .tgcol.c1 {
       height: $doubleCellHeight;
@@ -75,6 +78,7 @@
   .tgrow.ltb {
     grid-template-columns: $doubleCellWidth $doubleCellWidth;
     grid-template-rows: $doubleCellHeight $doubleCellHeight;
+    height: $doubleContainerHeight;
 
     .tgcol.c1 {
       height: $doubleContainerHeight;

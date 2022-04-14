@@ -4,6 +4,7 @@
 
     .tgrow {
       display: grid;
+      contain: strict;
     }
 
     .tgrow.uno {
