@@ -6,56 +6,18 @@
 
 @import "client-post";
 @import "client-twitter";
-@import "grid/index";
+@import "grid-editor/index";
 
-@include grid($desktop-min-width: 500px,
-  $desktop-max-width: 800px,
-  $breakpoint-step: 100px,
-  $gutter-fraction-desktop: 0.08,
-  $gutter-fraction-mobile: 0.04,
-  $cell-width-to-height-ratio-desktop: 1.5,
-  $cell-width-to-height-ratio-mobile: 0.66);
+@include grid-editor($width: 600px,
+  $gutter-fraction: 0.08,
+  $cell-width-to-height-ratio : 1.5,
+);
 
-.tgrow_prnt {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-// .tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout{
-//   position: relative;
-
-//   .tgcol {
-//     position: relative;
-//   }
-// }
 
 .wp-block-siejmy-tablogrid {
   border: 1px dotted #f00;
 }
 
-.tgrow>.block-editor-inner-blocks,
-.tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout,
-.tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block,
-.tgcol>.block-editor-inner-blocks,
-.tgcol>.block-editor-inner-blocks>.block-editor-block-list__layout,
-.tgcol>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block {
-  // position: absolute;
-  // top: 0;
-  // right: 0;
-  // bottom: 0;
-  // left: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.tgrow.midline>.block-editor-inner-blocks,
-.tgrow.midline>.block-editor-inner-blocks>.block-editor-block-list__layout,
-.tgrow.midline>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block,
-.tgrow.midline .tgcol>.block-editor-inner-blocks,
-.tgrow.midline .tgcol>.block-editor-inner-blocks>.block-editor-block-list__layout,
-.tgrow.midline .tgcol>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block {
-  position: relative;
-}
 
 .tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block>.tgcol {
   border: 3px dotted rgb(34, 32, 134);
