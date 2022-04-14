@@ -2,6 +2,11 @@
   .tgrow_prnt {
     margin: 0 auto;
 
+    .tgrow {
+      display: grid;
+      contain: strict;
+    }
+
     .tgrow.uno {
       grid-template-columns: 100%;
     }

@@ -27,6 +27,8 @@
           height: inherit;
 
           display: grid;
+          row-gap: $gutterSize;
+          column-gap: $gutterSize;
 
           .wp-block {
             margin: 0;

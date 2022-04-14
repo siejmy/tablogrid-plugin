@@ -134,6 +134,8 @@
   width: 600px;
   height: inherit;
   display: grid;
+  row-gap: 48px;
+  column-gap: 48px;
 }
 .tgrow_prnt .tgrow .block-editor-inner-blocks .block-editor-block-list__layout .wp-block {
   margin: 0;
