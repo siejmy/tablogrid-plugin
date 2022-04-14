@@ -41,30 +41,30 @@
           }
         }
       }
+    }
 
-      .tgrow.uno {
-        height: $singleCellHeight;
+    .tgrow.uno {
+      height: $singleCellHeight;
 
-        .block-editor-block-list__layout {
-          grid-template-rows: $singleCellHeight;
+      .block-editor-block-list__layout {
+        grid-template-rows: $singleCellHeight;
 
-          .wp-block:nth-child(1) {
-            height: $singleCellHeight;
-          }
+        .wp-block:nth-child(1) {
+          height: $singleCellHeight;
         }
       }
+    }
 
-      .tgrow.duo {
-        height: $doubleCellHeight;
-      }
+    .tgrow.duo {
+      height: $doubleCellHeight;
+    }
 
-      .tgrow.ltb {
-        height: $doubleContainerHeight;
-      }
+    .tgrow.ltb {
+      height: $doubleContainerHeight;
+    }
 
-      .tgrow.tbr {
-        height: $doubleContainerHeight;
-      }
+    .tgrow.tbr {
+      height: $doubleContainerHeight;
     }
   }
 }
