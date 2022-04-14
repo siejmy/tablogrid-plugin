@@ -2,7 +2,7 @@
   .tgrow_prnt {
     margin: 0 auto;
 
-    .tgrow {
+    .tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout {
       display: grid;
       contain: strict;
     }

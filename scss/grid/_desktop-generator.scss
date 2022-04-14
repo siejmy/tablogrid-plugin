@@ -12,7 +12,7 @@
     width: $rowWidth;
     margin-bottom: $gutterSize;
 
-    .tgrow {
+    .tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout {
       row-gap: $gutterSize;
       column-gap: $gutterSize;
     }
