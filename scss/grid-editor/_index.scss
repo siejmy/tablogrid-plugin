@@ -67,7 +67,7 @@
         grid-template-rows: $doubleCellHeight;
 
         &>.wp-block {
-          height: $singleCellHeight;
+          height: $doubleCellHeight;
         }
       }
     }
