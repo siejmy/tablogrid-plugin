@@ -15,12 +15,16 @@
 
 
 .wp-block-siejmy-tablogrid {
-  border: 1px dotted #f00;
+  outline: 1px dotted #f00;
 }
 
 
 .tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block>.tgcol {
-  border: 3px dotted rgb(34, 32, 134);
+  // Below code prevents margin collapse: https://stackoverflow.com/a/1939980 and https://www.w3.org/TR/CSS2/box.html#collapsing-margins
+  padding-top: 1px;
+  margin-top: -1px;
+
+  outline: 3px dotted rgb(34, 32, 134);
   z-index: 2;
 }
 
@@ -28,7 +32,7 @@
 
 /* Indicated tablogrid within tablogrid */
 >.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block>.tgcol .tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block>.tgcol {
-  border: 10px solid red;
+  outline: 10px solid red;
 }
 
 .tgrow
@@ -53,7 +57,7 @@
 
 .tablogrid_client {
   z-index: 2;
-  border: 3px dotted rgb(32, 127, 134);
+  outline: 3px dotted rgb(32, 127, 134);
   min-height: 50px;
 }
 
