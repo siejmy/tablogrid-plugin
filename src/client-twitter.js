@@ -9,6 +9,7 @@ export function initBlockTablogridClientTwitter() {
 		description: "Wyświetla ostatni tweet z danego konta",
 		category: "widgets",
 		icon: "smiley",
+		parent: ["siejmy/tablogrid-column"],
 		supports: {
 			html: false,
 		},
