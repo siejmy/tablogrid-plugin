@@ -2,6 +2,7 @@
 @import "mobile";
 @import "desktop-static";
 @import "desktop-generator";
+@import "midline";
 
 @mixin grid($desktop-min-width,
   $desktop-max-width,
@@ -31,4 +32,6 @@
 
     $currentMinWidth: $currentMinWidth+$step;
   }
+
+  @include midline();
 }
