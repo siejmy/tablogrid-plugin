@@ -8,6 +8,7 @@ export function initBlockTablogridClientPost() {
 		description: "Single post by ID",
 		category: "widgets",
 		icon: "smiley",
+		parent: ["siejmy/tablogrid-column"],
 		supports: {
 			html: false,
 		},

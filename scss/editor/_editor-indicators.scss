@@ -1,0 +1,59 @@
+.wp-block-siejmy-tablogrid {
+  outline: 1px dotted #f00;
+}
+
+
+.tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block>.tgcol {
+  // Below code prevents margin collapse: https://stackoverflow.com/a/1939980 and https://www.w3.org/TR/CSS2/box.html#collapsing-margins
+  padding-top: 1px;
+  margin-top: -1px;
+
+  outline: 3px dotted rgb(34, 32, 134);
+  z-index: 2;
+}
+
+.tgrow .block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
+  margin: 0 auto;
+}
+
+.tgrow
+
+/* Indicated tablogrid within tablogrid */
+>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block>.tgcol .tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block>.tgcol {
+  outline: 10px solid red;
+}
+
+.tgrow
+
+/* Indicated tablogrid within tablogrid */
+>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block>.tgcol .tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block>.tgcol::after {
+  content: "err: BLOK W BLOKU";
+  display: block;
+  position: absolute;
+  z-index: 4;
+  background: red;
+  color: white;
+  font-size: 10px;
+  width: 120px;
+  height: 13px;
+  text-align: center;
+}
+
+.tablogrid_client {
+  z-index: 2;
+  outline: 3px dotted rgb(32, 127, 134);
+  min-height: 50px;
+}
+
+.tablogrid_client::after {
+  content: "CONTENT";
+  display: block;
+  position: absolute;
+  z-index: 4;
+  background: red;
+  color: white;
+  font-size: 6px;
+  width: 30px;
+  height: 7px;
+  text-align: center;
+}

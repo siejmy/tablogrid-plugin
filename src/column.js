@@ -2,6 +2,10 @@ import { registerBlockType } from "@wordpress/blocks"
 import { InnerBlocks } from "@wordpress/block-editor"
 
 export function initBlockTablogridColumn() {
+	const allowedChildBlocks = [
+		"siejmy/tablogrid-client-post",
+		"siejmy/tablogrid-client-twitter"
+	]
 	registerBlockType("siejmy/tablogrid-column", {
 		title: "Tablogrid column",
 		description: "Column (internally used)",
@@ -23,7 +27,7 @@ export function initBlockTablogridColumn() {
 						className + " tgcol c" + attributes.columnIndex + " column"
 					}
 				>
-					<InnerBlocks templateLock={false} />
+					<InnerBlocks allowedBlocks={allowedChildBlocks} templateLock={false} />
 				</div>
 			)
 		},

@@ -1,0 +1,19 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../grid-editor/index";
+@import "../client-post";
+@import "client-post";
+@import "../client-twitter";
+@import "client-twitter";
+@import "midline";
+
+@include grid-editor($width: 600px,
+  $gutter-fraction: 0.08,
+  $cell-width-to-height-ratio : 1.5,
+);
+
+@import "editor-indicators";
