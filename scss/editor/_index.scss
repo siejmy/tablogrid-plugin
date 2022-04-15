@@ -1,0 +1,164 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../client-post";
+@import "../client-twitter";
+@import "../grid-editor/index";
+
+@include grid-editor($width: 600px,
+  $gutter-fraction: 0.08,
+  $cell-width-to-height-ratio : 1.5,
+);
+
+
+.wp-block-siejmy-tablogrid {
+  outline: 1px dotted #f00;
+}
+
+
+.tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block>.tgcol {
+  // Below code prevents margin collapse: https://stackoverflow.com/a/1939980 and https://www.w3.org/TR/CSS2/box.html#collapsing-margins
+  padding-top: 1px;
+  margin-top: -1px;
+
+  outline: 3px dotted rgb(34, 32, 134);
+  z-index: 2;
+}
+
+.tgrow .block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
+  margin: 0 auto;
+}
+
+.tgrow
+
+/* Indicated tablogrid within tablogrid */
+>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block>.tgcol .tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block>.tgcol {
+  outline: 10px solid red;
+}
+
+.tgrow
+
+/* Indicated tablogrid within tablogrid */
+>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block>.tgcol .tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block>.tgcol::after {
+  content: "err: BLOK W BLOKU";
+  display: block;
+  position: absolute;
+  z-index: 4;
+  background: red;
+  color: white;
+  font-size: 10px;
+  width: 120px;
+  height: 13px;
+  text-align: center;
+}
+
+.tablogrid_client {
+  z-index: 2;
+  outline: 3px dotted rgb(32, 127, 134);
+  min-height: 50px;
+}
+
+.tablogrid_client::after {
+  content: "CONTENT";
+  display: block;
+  position: absolute;
+  z-index: 4;
+  background: red;
+  color: white;
+  font-size: 6px;
+  width: 30px;
+  height: 7px;
+  text-align: center;
+}
+
+/*
+
+
+
+
+
+
+
+  TABLOPOST
+  */
+.tablopost .caption {
+  opacity: 1;
+  position: relative;
+}
+
+.tablopost .herocaption {
+  left: 0.5rem !important;
+  bottom: 0.5rem !important;
+  right: 0.5rem !important;
+}
+
+.tablopost h3 {
+  margin: 0 !important;
+}
+
+.tablopost img {
+  height: 100% !important;
+}
+
+.tablopost .subline input {
+  font-size: 10px;
+  height: 20px;
+  min-height: 20px;
+  width: 50px;
+  min-width: 50px;
+}
+
+.tablopost img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.tablopost:hover img {
+  transform: scaleZ(1) scale(1.05);
+}
+
+/***
+  Twitter
+  */
+.client_twitter {
+  background: rgb(29, 161, 242);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 12px;
+}
+
+.client_twitter input {
+  max-width: 110px;
+}
+
+.client_twitter .select-media-btn {
+  background: white;
+}
+
+.client_twitter .media_upload_container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.client_twitter blockquote {
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 11px;
+  line-height: 14px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  color: black;
+  text-shadow: 0 0 0;
+  margin-top: 12px;
+}

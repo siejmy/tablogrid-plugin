@@ -266,10 +266,6 @@
   text-align: center;
 }
 
-.tgrow.midline {
-  padding-top: 20%;
-}
-
 .tablogrid_client {
   z-index: 2;
   outline: 3px dotted rgb(32, 127, 134);
@@ -297,8 +293,8 @@
 
 
 
- TABLOPOST
- */
+  TABLOPOST
+  */
 .tablopost .caption {
   opacity: 1;
   position: relative;
@@ -339,8 +335,8 @@
 }
 
 /***
- Twitter
- */
+  Twitter
+  */
 .client_twitter {
   background: rgb(29, 161, 242);
   background-position: center;
