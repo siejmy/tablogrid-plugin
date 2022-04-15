@@ -9,7 +9,7 @@
     margin: 0 auto;
     width: $contentWidth;
 
-    .tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout {
+    .tgrow {
       margin: 0;
       padding: 0;
 
@@ -42,7 +42,7 @@
     width: auto;
   }
 
-  .tgrow>.block-editor-inner-blocks>.block-editor-block-list__layout {
+  .tgrow {
     .tgcol {
       margin-bottom: 0;
     }
