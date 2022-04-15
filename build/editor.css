@@ -118,6 +118,7 @@
 .tgrow_prnt {
   width: 600px;
   margin: 0 auto;
+  margin-bottom: 48px;
 }
 .tgrow_prnt .tgrow {
   width: 600px;
@@ -213,20 +214,24 @@
   grid-row: 2/2;
   grid-column: 2/2;
 }
-.tgrow_prnt .tgrow > .block-editor-inner-blocks > .block-editor-block-list__layout > .tgcol > .block-editor-inner-blocks {
+.tgrow_prnt .tgrow > .block-editor-inner-blocks,
+.tgrow_prnt .tgrow > .block-editor-inner-blocks > .block-editor-block-list__layout,
+.tgrow_prnt .tgrow > .block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block,
+.tgrow_prnt .tgrow > .block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block > .tgcol,
+.tgrow_prnt .tgrow > .block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block > .tgcol > .block-editor-inner-blocks,
+.tgrow_prnt .tgrow > .block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block > .tgcol > .block-editor-inner-blocks > .block-editor-block-list__layout,
+.tgrow_prnt .tgrow > .block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block > .tgcol > .block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block {
   margin: 0;
   padding: 0;
   height: inherit;
+  padding-top: 1px;
+  margin-top: -1px;
 }
-.tgrow_prnt .tgrow > .block-editor-inner-blocks > .block-editor-block-list__layout > .tgcol > .block-editor-inner-blocks > .block-editor-block-list__layout {
-  margin: 0;
-  padding: 0;
-  height: inherit;
+.tgrow_prnt .tgrow .tgcol > .block-editor-inner-blocks > .block-editor-block-list__layout .wp-block {
+  display: none;
 }
-.tgrow_prnt .tgrow > .block-editor-inner-blocks > .block-editor-block-list__layout > .tgcol > .block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block {
-  margin: 0;
-  padding: 0;
-  height: inherit;
+.tgrow_prnt .tgrow .tgcol > .block-editor-inner-blocks > .block-editor-block-list__layout .wp-block:first-of-type {
+  display: block;
 }
 
 .wp-block-siejmy-tablogrid {
@@ -238,6 +243,10 @@
   margin-top: -1px;
   outline: 3px dotted rgb(34, 32, 134);
   z-index: 2;
+}
+
+.tgrow .block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
+  margin: 0 auto;
 }
 
 .tgrow > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-editor-block-list__block > .tgcol .tgrow > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-editor-block-list__block > .tgcol {
