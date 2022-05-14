@@ -61,20 +61,22 @@
 }
 
 .tablopost .herocaption {
+  position: absolute;
   left: 0.5rem !important;
   bottom: 0.5rem !important;
   right: 0.5rem !important;
 }
-
-.tablopost h3 {
+.tablopost .herocaption h3 {
   margin: 0 !important;
+  font-size: 20px !important;
 }
-
-.tablopost img {
-  height: 100% !important;
+.tablopost .herocaption .tag {
+  display: none;
 }
-
-.tablopost .subline input {
+.tablopost .herocaption .subline {
+  font-size: 15px;
+}
+.tablopost .herocaption .subline input {
   font-size: 10px;
   height: 20px;
   min-height: 20px;
@@ -83,6 +85,7 @@
 }
 
 .tablopost img {
+  height: 100% !important;
   position: absolute;
   width: 100%;
   height: 100%;
