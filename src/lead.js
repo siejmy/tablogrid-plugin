@@ -43,6 +43,7 @@ export function initLead() {
     },
     save: (props) => {
       const blockProps = useBlockProps.save();
+      const { className } = props;
       return (
         <RichText.Content
           {...blockProps}
