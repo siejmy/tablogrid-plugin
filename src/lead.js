@@ -6,7 +6,7 @@ export function initLead() {
     title: "Lead H2",
     description: "Lead that has paragraph size but facilitates H2 tag",
     category: "text",
-    icon: "post",
+    icon: "smiley",
     supports: {
       html: false,
     },
@@ -20,7 +20,7 @@ export function initLead() {
     save: ({ className }) => {
       return (
         <h2 className={className + " p lead"}>
-          <InnerBlocks.Content />
+          <InnerBlocks />
         </h2>
       )
     },
