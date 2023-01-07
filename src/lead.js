@@ -8,21 +8,49 @@ export function initLead() {
     category: "text",
     icon: "smiley",
     supports: {
-      html: true,
+      html: false,
     },
-    edit: ({ className }) => {
-      return (
-        <p className={className}>
-          <InnerBlocks />
-        </p>
-      )
+    attributes: {
+      content: {
+        type: 'string',
+        source: 'html',
+        selector: 'p',
+      },
     },
-    save: ({ className }) => {
+    example: {
+      attributes: {
+        content: 'This is a <strong>lead paragraph</strong> that looks like normal paragraph but has H2 html tag.',
+      },
+    },
+    edit: (props) => {
+      const {
+        attributes: { content },
+        setAttributes,
+        className,
+      } = props;
+      const blockProps = useBlockProps();
+      const onChangeContent = (newContent) => {
+        setAttributes({ content: newContent });
+      };
       return (
-        <h2 className={className + " p lead"}>
-          <InnerBlocks.Content />
-        </h2>
-      )
+        <RichText
+          {...blockProps}
+          tagName="p"
+          onChange={onChangeContent}
+          value={content}
+        />
+      );
+    },
+    save: (props) => {
+      const blockProps = useBlockProps.save();
+      return (
+        <RichText.Content
+          {...blockProps}
+          tagName="h2"
+          value={props.attributes.content}
+          className={className + " p lead"}
+        />
+      );
     },
   })
 }
