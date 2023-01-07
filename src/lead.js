@@ -8,7 +8,7 @@ export function initLead() {
     category: "text",
     icon: "smiley",
     supports: {
-      html: false,
+      html: true,
     },
     edit: ({ className }) => {
       return (
@@ -20,7 +20,7 @@ export function initLead() {
     save: ({ className }) => {
       return (
         <h2 className={className + " p lead"}>
-          <InnerBlocks />
+          <InnerBlocks.Content />
         </h2>
       )
     },
