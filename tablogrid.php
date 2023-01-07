@@ -82,6 +82,13 @@ function register_block_type_client_twitter() {
 	) );
 }
 
+function register_block_type_lead() {
+	register_block_type( 'siejmy/lead', array(
+		'editor_script' => 'siejmy-tablogrid-block-editor',
+		'editor_style'  => 'siejmy-tablogrid-block-editor',
+	) );
+}
+
 function create_block_tablogrid_block_init() {
 	$dir = dirname( __FILE__ );
 
@@ -112,5 +119,6 @@ function create_block_tablogrid_block_init() {
 	register_block_type_column();
 	register_block_type_client_post();
 	register_block_type_client_twitter();
+	register_block_type_lead();
 }
 add_action( 'init', 'create_block_tablogrid_block_init' );
